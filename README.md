@@ -9,7 +9,6 @@
 * Install Docker
 * Install `minikube`
 * Install `kubectl`
-* Install Kontena Lens
 * Install Python
    * Install PiP via Python
       * `python -m ensurepip`
