@@ -20,8 +20,9 @@
 * Fork and clone this project locally.
 * Create a respective `requirements.txt` to download any `pip` dependencies for this python project.
   * Ensure you `push` the newly created file: `requirements.txt`
-* Create a `Dockerfile` which builds the image.
-* Push image to [Dockerhub](https://hub.docker.com/).
+* Create a `Dockerfile` to  build the image.
+* Build the image
+* Push image to one of your repos on  [Dockerhub](https://hub.docker.com/).
 * Create a `kubernetes.yml` which will pull the aforementioned Dockerhub image and create 3 running copies of it.
 * Use the `kubernetes.yml` to launch your application
 * Write and run a script to determine the state of your kubernetes cluster including the information about the services, pods, nodes, ip addresses, etc.
