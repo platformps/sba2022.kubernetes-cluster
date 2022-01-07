@@ -20,7 +20,7 @@
 * Fork and clone this project locally.
 * Create a respective `requirements.txt` to download any `pip` dependencies for this python project.
   * Ensure you `push` the newly created file: `requirements.txt`
-* Create a `Dockerfile` to  build the image.
+* Create a `Dockerfile` to  build the image.  Push it to github
 * Build the image
 * Push image to one of your repos on  [Dockerhub](https://hub.docker.com/).
 * Create a `kubernetes.yml` which will pull the aforementioned Dockerhub image and create 3 running copies of it.
