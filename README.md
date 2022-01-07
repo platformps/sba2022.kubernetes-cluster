@@ -26,8 +26,8 @@
 * Create a `kubernetes.yml` which will pull the aforementioned Dockerhub image and create 3 running copies of it.
 * Use the `kubernetes.yml` to launch your application
 * Write and run a script to determine the state of your kubernetes cluster including the information about the services, pods, nodes, ip addresses, etc.
-  * upload script to `kubernetes-cluster-information.sh`
-  * redirect the output of the `kuberenetes-cluster-information.sh` to `kuberenetes-cluster-information-output`
+  * upload script to github `kubernetes-cluster-information.sh`
+  * run script and  redirect the output of the `kuberenetes-cluster-information.sh` to `kuberenetes-cluster-information-output`
 
 
 
