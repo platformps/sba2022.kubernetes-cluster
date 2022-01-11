@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app: myapp
+        app: sba-2022-kubernetes
     spec:
       containers:
-      - name: myapp
+      - name: sba-2022-kubernetes
         image: umamages/sba-2022-kubernetes/
         resources: {}
       dnsPolicy: ClusterFirst
