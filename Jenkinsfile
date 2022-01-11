@@ -7,13 +7,5 @@ pipeline {
                 sh 'docker build -t marcuskielman/web_sba .'
             }
         }
-        stage('Push to DockerHub') {
-            steps {
-                echo 'Pushing Image to DockerHub'
-                sh 'docker push marcuskielman/web_sba'
-                
-            }
-        }
-        
     }
 }
