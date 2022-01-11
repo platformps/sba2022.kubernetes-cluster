@@ -21,14 +21,14 @@ Unschedulable:      false
 Lease:
   HolderIdentity:  minikube
   AcquireTime:     <unset>
-  RenewTime:       Tue, 11 Jan 2022 14:40:44 -0500
+  RenewTime:       Tue, 11 Jan 2022 15:30:35 -0500
 Conditions:
   Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
   ----             ------  -----------------                 ------------------                ------                       -------
-  MemoryPressure   False   Tue, 11 Jan 2022 14:36:14 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
-  DiskPressure     False   Tue, 11 Jan 2022 14:36:14 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
-  PIDPressure      False   Tue, 11 Jan 2022 14:36:14 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
-  Ready            True    Tue, 11 Jan 2022 14:36:14 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletReady                 kubelet is posting ready status
+  MemoryPressure   False   Tue, 11 Jan 2022 15:28:05 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 11 Jan 2022 15:28:05 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 11 Jan 2022 15:28:05 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 11 Jan 2022 15:28:05 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletReady                 kubelet is posting ready status
 Addresses:
   InternalIP:  192.168.49.2
   Hostname:    minikube
@@ -60,18 +60,18 @@ System Info:
 PodCIDR:                      10.244.0.0/24
 PodCIDRs:                     10.244.0.0/24
 Non-terminated Pods:          (10 in total)
-  Namespace                   Name                                              CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
-  ---------                   ----                                              ------------  ----------  ---------------  -------------  ---
-  default                     kubernetes-cluster-deployment-7457878cd9-2hqgj    0 (0%)        0 (0%)      0 (0%)           0 (0%)         46m
-  default                     kubernetes-cluster-deployment-7457878cd9-cnpfj    0 (0%)        0 (0%)      0 (0%)           0 (0%)         46m
-  default                     kubernetes-cluster-deployment-7457878cd9-wt28t    0 (0%)        0 (0%)      0 (0%)           0 (0%)         46m
-  kube-system                 coredns-78fcd69978-d77sg                          100m (1%)     0 (0%)      70Mi (0%)        170Mi (1%)     29h
-  kube-system                 etcd-minikube                                     100m (1%)     0 (0%)      100Mi (0%)       0 (0%)         29h
-  kube-system                 kube-apiserver-minikube                           250m (3%)     0 (0%)      0 (0%)           0 (0%)         29h
-  kube-system                 kube-controller-manager-minikube                  200m (2%)     0 (0%)      0 (0%)           0 (0%)         29h
-  kube-system                 kube-proxy-tvf9k                                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         29h
-  kube-system                 kube-scheduler-minikube                           100m (1%)     0 (0%)      0 (0%)           0 (0%)         29h
-  kube-system                 storage-provisioner                               0 (0%)        0 (0%)      0 (0%)           0 (0%)         29h
+  Namespace                   Name                                CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                ------------  ----------  ---------------  -------------  ---
+  default                     k8s-deployment-5985b97465-84jdl     0 (0%)        0 (0%)      0 (0%)           0 (0%)         3m22s
+  default                     k8s-deployment-5985b97465-dv6wv     0 (0%)        0 (0%)      0 (0%)           0 (0%)         3m22s
+  default                     k8s-deployment-5985b97465-hg58r     0 (0%)        0 (0%)      0 (0%)           0 (0%)         3m22s
+  kube-system                 coredns-78fcd69978-d77sg            100m (1%)     0 (0%)      70Mi (0%)        170Mi (1%)     30h
+  kube-system                 etcd-minikube                       100m (1%)     0 (0%)      100Mi (0%)       0 (0%)         30h
+  kube-system                 kube-apiserver-minikube             250m (3%)     0 (0%)      0 (0%)           0 (0%)         30h
+  kube-system                 kube-controller-manager-minikube    200m (2%)     0 (0%)      0 (0%)           0 (0%)         30h
+  kube-system                 kube-proxy-tvf9k                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         30h
+  kube-system                 kube-scheduler-minikube             100m (1%)     0 (0%)      0 (0%)           0 (0%)         30h
+  kube-system                 storage-provisioner                 0 (0%)        0 (0%)      0 (0%)           0 (0%)         30h
 Allocated resources:
   (Total limits may be over 100 percent, i.e., overcommitted.)
   Resource           Requests    Limits
