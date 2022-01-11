@@ -5,8 +5,9 @@ pipeline {
   stages {
     stage('Clone Repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-
+       steps {
         checkout scm
+       }
     }
     stage('Docker Build') {
       agent any
