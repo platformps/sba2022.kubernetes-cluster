@@ -4,16 +4,14 @@
 
 
 
-## Prerequisite Software For Project
-* Install Git CLI
-* Install Docker
-* Install `minikube`
-* Install `kubectl`
-* Install Python
-   * Install PiP via Python
-      * `python -m ensurepip`
-   * Install `Flask`
-      * `python -m pip install Flask`
+##  Software Used in This Project
+*  Git CLI
+*  Docker
+*  minikube
+*  kubectl
+*  Python
+ * Flask
+ * Jenkins
 
 ## Instructions
 * Fork and clone this project locally.
@@ -23,11 +21,11 @@
 * Build the image
 * Push image to one of your repos on  [Dockerhub](https://hub.docker.com/).
 * Create a `kubernetes.yml` which will pull the aforementioned Dockerhub image and create 3 running copies of it.
-* Use the `kubernetes.yml` to launch your application.  Push this file to your github repo as well.
+* Use the `kubernetes.yml` to launch your application.  Push this file to your github repo as well.  If possible have jenkins start the app by this method.
 * Write and run a script to determine the state of your kubernetes cluster including the information about the services, pods, nodes, ip addresses, etc.
   * upload script to github `kubernetes-cluster-information.sh`
   * run script and  redirect the output of the `kuberenetes-cluster-information.sh` to `kuberenetes-cluster-information-output`
-
+  * push the script output to your github repo
 
 
 ### How to Download
