@@ -1,9 +1,10 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
-        stage('test') {
+        stage {
             steps {
                 sh 'python3 --version'
+                sh 'docker build -t kubetastic .'
             }
         }
     }
