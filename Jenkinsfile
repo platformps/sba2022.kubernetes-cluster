@@ -1,8 +1,10 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        steps {
-            python3 --version
+        stage('test') {
+            steps {
+                sh 'python3 --version'
+            }
         }
     }
 }
