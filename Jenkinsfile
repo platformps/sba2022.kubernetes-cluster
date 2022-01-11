@@ -4,6 +4,7 @@ pipeline {
         stage('Run Kubernetes Service') {
             steps {
                 echo 'Starting Kubernetes Service'
+                sh 'minikube start'
                 sh 'kubectl apply -f kubernetes.yml'
             }
         }
