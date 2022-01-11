@@ -1,0 +1,30 @@
+==================== Getting the state of the cluster ==================================
+[0;32mKubernetes control plane[0m is running at [0;33mhttps://172.17.0.26:8443[0m
+[0;32mKubeDNS[0m is running at [0;33mhttps://172.17.0.26:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy[0m
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+========================================================================================
+==================== Getting the list of created services ==============================
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   6m21s
+========================================================================================
+==================== Getting the list of deployment ====================================
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+myapp-deployment   3/3     3            3           3m21s
+========================================================================================
+==================== Getting the list of the pods ======================================
+NAME                                READY   STATUS    RESTARTS   AGE
+myapp-deployment-6cb9986879-6nntw   1/1     Running   0          3m21s
+myapp-deployment-6cb9986879-g26m9   1/1     Running   0          3m21s
+myapp-deployment-6cb9986879-hg2kb   1/1     Running   0          3m21s
+========================================================================================
+NAME                                READY   STATUS    RESTARTS   AGE     IP           NODE       NOMINATED NODE   READINESS GATES
+myapp-deployment-6cb9986879-6nntw   1/1     Running   0          3m21s   172.18.0.4   minikube   <none>           <none>
+myapp-deployment-6cb9986879-g26m9   1/1     Running   0          3m21s   172.18.0.5   minikube   <none>           <none>
+myapp-deployment-6cb9986879-hg2kb   1/1     Running   0          3m21s   172.18.0.3   minikube   <none>           <none>
+========================================================================================
+NAME                                READY   STATUS    RESTARTS   AGE
+myapp-deployment-6cb9986879-6nntw   1/1     Running   0          3m22s
+myapp-deployment-6cb9986879-g26m9   1/1     Running   0          3m22s
+myapp-deployment-6cb9986879-hg2kb   1/1     Running   0          3m22s
+======================
