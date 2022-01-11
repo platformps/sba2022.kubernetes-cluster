@@ -49,23 +49,22 @@
 <img src="./VIEWME.gif">
 
 
+## Grading SBA (1100 pts total)
+	Points Breakdown
 
-
+	* 150		 pushed a requirements.txt file to their repo
+	* 150		 built the new image w/jenkins
+	* 150		 pushed Dockerfile to repo
+	* 150		 Pushed built image to dockerhub
+	* 150		 deployed image to k8s cluster
+	* 150	 	 screenshot showing their browser with the spinning flasks
+	* 150		 script+output to show k8s cluster status, 400 points if output shows correct functioning(e.g. pods, nodes, deployments, etc... of app) output+script pushed to github
+	* 50		 submitted pull request with all their changes
 
 
 ## How to Submit
 
-#### Part 1 -  _Pushing_ local changes to remote repository
-* from a _terminal_ navigate to the root directory of the _cloned_ project.
-* from the root directory of the project, execute the following commands:
-    * add all changes
-      * `git add .`
-    * commit changes to be pushed
-      * `git commit -m 'I have added changes'`
-    * push changes to your repository
-      * `git push -u origin master`
-
-#### Part 2 - Submitting assignment
+#### Submitting assignment
 * from the browser, navigate to the _forked_ project from **your** github account.
 * click the `Pull Requests` tab.
 * select `New Pull Request`
