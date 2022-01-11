@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sba2022pod
+spec:
+  containers:
+    - name: sba2022container
+      image: conroy3644/sba2022.kube:latest
+      ports:
+      - containerPort: 8080
