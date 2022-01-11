@@ -57,7 +57,7 @@
 	* 150		 pushed Dockerfile to repo
 	* 150		 Pushed built image to dockerhub
 	* 150		 deployed image to k8s cluster
-	* 150	  screenshot showing their browser
+	* 150	 	 screenshot showing their browser with the spinning flasks
 	* 150		 script+output to show k8s cluster status, 400 points if output shows correct functioning(e.g. pods, nodes, deployments, etc... of app) output+script pushed to github
 	* 50		 submitted pull request with all their changes
 
