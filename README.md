@@ -1,5 +1,5 @@
 # SBA Kubernetes Cluster
-* **Objective** - Clone and modify this repository locally to ensure that Jenkins can successfully build this project.
+* **Objective** - Create a CI/CD Pipeline that builds an image from github and deploys it to a kubernetes cluster
 * **Purpose** - To demonstrate container orchestration skillset
 
 
