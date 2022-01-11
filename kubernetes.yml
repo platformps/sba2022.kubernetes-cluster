@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-sba
+spec:
+  selector:
+    app: web-sba
+  ports:
+  - protocol: "TCP"
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-sba
+spec:
+  selector:
+    matchLabels:
+      app: web-sba
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: web-sba
+    spec:
+      containers:
+      - name: web-sba
+        image: marcuskielman/web_sba:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
