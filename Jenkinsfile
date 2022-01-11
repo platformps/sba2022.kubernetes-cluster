@@ -1,7 +1,7 @@
 #!groovy
 
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Clone Repository') {
         /* Let's make sure we have the repository cloned to our workspace */
