@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kubectl describe svc 
-kubectl describe pod
-kubectl describe nodes > kubernetes-cluster-information-output
-
+kubectl describe svc > kubernetes-cluster-information-output
+kubectl describe pod >> kubernetes-cluster-information-output
+kubectl describe nodes >> kubernetes-cluster-information-output
+kubectl describe deployments 

@@ -1,3 +1,198 @@
+Name:                     k8s-service
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=sba-k8s
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.110.108.223
+IPs:                      10.110.108.223
+Port:                     <unset>  5000/TCP
+TargetPort:               5000/TCP
+NodePort:                 <unset>  32000/TCP
+Endpoints:                172.17.0.2:5000,172.17.0.4:5000,172.17.0.5:5000
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.96.0.1
+IPs:               10.96.0.1
+Port:              https  443/TCP
+TargetPort:        8443/TCP
+Endpoints:         192.168.49.2:8443
+Session Affinity:  None
+Events:            <none>
+Name:         k8s-deployment-5985b97465-84jdl
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Tue, 11 Jan 2022 15:27:15 -0500
+Labels:       app=sba-k8s
+              pod-template-hash=5985b97465
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.2
+IPs:
+  IP:           172.17.0.2
+Controlled By:  ReplicaSet/k8s-deployment-5985b97465
+Containers:
+  k8s-container:
+    Container ID:   docker://ca7a41c0869ba65140a7735570d85402c8ce11663c4c7d56b14e560444161d32
+    Image:          buildapp/k8s-webapp
+    Image ID:       docker-pullable://buildapp/k8s-webapp@sha256:6510eb8fd6d451766f53e6bf4f0a7ac7ffb5cec14e7a7b807e89a57daed87d43
+    Port:           5000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Jan 2022 15:27:52 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-56jbb (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-56jbb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  23m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-84jdl to minikube
+  Normal  Pulling    23m   kubelet            Pulling image "buildapp/k8s-webapp"
+  Normal  Pulled     23m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 35.619386452s
+  Normal  Created    23m   kubelet            Created container k8s-container
+  Normal  Started    23m   kubelet            Started container k8s-container
+
+
+Name:         k8s-deployment-5985b97465-dv6wv
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Tue, 11 Jan 2022 15:27:15 -0500
+Labels:       app=sba-k8s
+              pod-template-hash=5985b97465
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.5
+IPs:
+  IP:           172.17.0.5
+Controlled By:  ReplicaSet/k8s-deployment-5985b97465
+Containers:
+  k8s-container:
+    Container ID:   docker://cfd36bd959155f22c8eea90a9a25c74289391201548a4a1cfdfef60119ea58f0
+    Image:          buildapp/k8s-webapp
+    Image ID:       docker-pullable://buildapp/k8s-webapp@sha256:6510eb8fd6d451766f53e6bf4f0a7ac7ffb5cec14e7a7b807e89a57daed87d43
+    Port:           5000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Jan 2022 15:27:53 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bcdh9 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-bcdh9:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  23m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-dv6wv to minikube
+  Normal  Pulling    23m   kubelet            Pulling image "buildapp/k8s-webapp"
+  Normal  Pulled     23m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 36.450695821s
+  Normal  Created    23m   kubelet            Created container k8s-container
+  Normal  Started    23m   kubelet            Started container k8s-container
+
+
+Name:         k8s-deployment-5985b97465-hg58r
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Tue, 11 Jan 2022 15:27:15 -0500
+Labels:       app=sba-k8s
+              pod-template-hash=5985b97465
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.4
+IPs:
+  IP:           172.17.0.4
+Controlled By:  ReplicaSet/k8s-deployment-5985b97465
+Containers:
+  k8s-container:
+    Container ID:   docker://b7e8674cc43b8d5a6ebca1323d471975c31f4064e83ad0e6d6ca0e19941fa60b
+    Image:          buildapp/k8s-webapp
+    Image ID:       docker-pullable://buildapp/k8s-webapp@sha256:6510eb8fd6d451766f53e6bf4f0a7ac7ffb5cec14e7a7b807e89a57daed87d43
+    Port:           5000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Jan 2022 15:27:52 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-6zsjc (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-6zsjc:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  23m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-hg58r to minikube
+  Normal  Pulling    23m   kubelet            Pulling image "buildapp/k8s-webapp"
+  Normal  Pulled     23m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 35.976053994s
+  Normal  Created    23m   kubelet            Created container k8s-container
+  Normal  Started    23m   kubelet            Started container k8s-container
 Name:               minikube
 Roles:              control-plane,master
 Labels:             beta.kubernetes.io/arch=amd64
@@ -21,14 +216,14 @@ Unschedulable:      false
 Lease:
   HolderIdentity:  minikube
   AcquireTime:     <unset>
-  RenewTime:       Tue, 11 Jan 2022 15:30:35 -0500
+  RenewTime:       Tue, 11 Jan 2022 15:50:48 -0500
 Conditions:
   Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
   ----             ------  -----------------                 ------------------                ------                       -------
-  MemoryPressure   False   Tue, 11 Jan 2022 15:28:05 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
-  DiskPressure     False   Tue, 11 Jan 2022 15:28:05 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
-  PIDPressure      False   Tue, 11 Jan 2022 15:28:05 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
-  Ready            True    Tue, 11 Jan 2022 15:28:05 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletReady                 kubelet is posting ready status
+  MemoryPressure   False   Tue, 11 Jan 2022 15:48:09 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 11 Jan 2022 15:48:09 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 11 Jan 2022 15:48:09 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 11 Jan 2022 15:48:09 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletReady                 kubelet is posting ready status
 Addresses:
   InternalIP:  192.168.49.2
   Hostname:    minikube
@@ -62,9 +257,9 @@ PodCIDRs:                     10.244.0.0/24
 Non-terminated Pods:          (10 in total)
   Namespace                   Name                                CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
   ---------                   ----                                ------------  ----------  ---------------  -------------  ---
-  default                     k8s-deployment-5985b97465-84jdl     0 (0%)        0 (0%)      0 (0%)           0 (0%)         3m22s
-  default                     k8s-deployment-5985b97465-dv6wv     0 (0%)        0 (0%)      0 (0%)           0 (0%)         3m22s
-  default                     k8s-deployment-5985b97465-hg58r     0 (0%)        0 (0%)      0 (0%)           0 (0%)         3m22s
+  default                     k8s-deployment-5985b97465-84jdl     0 (0%)        0 (0%)      0 (0%)           0 (0%)         23m
+  default                     k8s-deployment-5985b97465-dv6wv     0 (0%)        0 (0%)      0 (0%)           0 (0%)         23m
+  default                     k8s-deployment-5985b97465-hg58r     0 (0%)        0 (0%)      0 (0%)           0 (0%)         23m
   kube-system                 coredns-78fcd69978-d77sg            100m (1%)     0 (0%)      70Mi (0%)        170Mi (1%)     30h
   kube-system                 etcd-minikube                       100m (1%)     0 (0%)      100Mi (0%)       0 (0%)         30h
   kube-system                 kube-apiserver-minikube             250m (3%)     0 (0%)      0 (0%)           0 (0%)         30h
