@@ -1,2 +1,1 @@
-python -m ensurepip
-python -m pip install flask
+Flask==1.1.2
