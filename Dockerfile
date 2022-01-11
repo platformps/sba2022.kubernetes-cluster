@@ -12,6 +12,6 @@ COPY . /app/
 
 EXPOSE 5000
 
-CMD ["web.py"]
+CMD ["python", "web.py"]
 
 

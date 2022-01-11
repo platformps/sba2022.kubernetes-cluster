@@ -1,5 +1,6 @@
-{ kubectl describe svc 
+#!/bin/bash
+
+kubectl describe svc 
 kubectl describe pod
-kubectl describe nodes
-kubectl describe cluster-info } > kubernetes-cluster-information-output
+kubectl describe nodes > kubernetes-cluster-information-output
 
