@@ -80,11 +80,11 @@ Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists fo
 Events:
   Type    Reason     Age   From               Message
   ----    ------     ----  ----               -------
-  Normal  Scheduled  23m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-84jdl to minikube
-  Normal  Pulling    23m   kubelet            Pulling image "buildapp/k8s-webapp"
-  Normal  Pulled     23m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 35.619386452s
-  Normal  Created    23m   kubelet            Created container k8s-container
-  Normal  Started    23m   kubelet            Started container k8s-container
+  Normal  Scheduled  29m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-84jdl to minikube
+  Normal  Pulling    29m   kubelet            Pulling image "buildapp/k8s-webapp"
+  Normal  Pulled     29m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 35.619386452s
+  Normal  Created    29m   kubelet            Created container k8s-container
+  Normal  Started    29m   kubelet            Started container k8s-container
 
 
 Name:         k8s-deployment-5985b97465-dv6wv
@@ -134,11 +134,11 @@ Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists fo
 Events:
   Type    Reason     Age   From               Message
   ----    ------     ----  ----               -------
-  Normal  Scheduled  23m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-dv6wv to minikube
-  Normal  Pulling    23m   kubelet            Pulling image "buildapp/k8s-webapp"
-  Normal  Pulled     23m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 36.450695821s
-  Normal  Created    23m   kubelet            Created container k8s-container
-  Normal  Started    23m   kubelet            Started container k8s-container
+  Normal  Scheduled  29m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-dv6wv to minikube
+  Normal  Pulling    29m   kubelet            Pulling image "buildapp/k8s-webapp"
+  Normal  Pulled     29m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 36.450695821s
+  Normal  Created    29m   kubelet            Created container k8s-container
+  Normal  Started    29m   kubelet            Started container k8s-container
 
 
 Name:         k8s-deployment-5985b97465-hg58r
@@ -188,11 +188,11 @@ Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists fo
 Events:
   Type    Reason     Age   From               Message
   ----    ------     ----  ----               -------
-  Normal  Scheduled  23m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-hg58r to minikube
-  Normal  Pulling    23m   kubelet            Pulling image "buildapp/k8s-webapp"
-  Normal  Pulled     23m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 35.976053994s
-  Normal  Created    23m   kubelet            Created container k8s-container
-  Normal  Started    23m   kubelet            Started container k8s-container
+  Normal  Scheduled  29m   default-scheduler  Successfully assigned default/k8s-deployment-5985b97465-hg58r to minikube
+  Normal  Pulling    29m   kubelet            Pulling image "buildapp/k8s-webapp"
+  Normal  Pulled     29m   kubelet            Successfully pulled image "buildapp/k8s-webapp" in 35.976053994s
+  Normal  Created    29m   kubelet            Created container k8s-container
+  Normal  Started    29m   kubelet            Started container k8s-container
 Name:               minikube
 Roles:              control-plane,master
 Labels:             beta.kubernetes.io/arch=amd64
@@ -216,14 +216,14 @@ Unschedulable:      false
 Lease:
   HolderIdentity:  minikube
   AcquireTime:     <unset>
-  RenewTime:       Tue, 11 Jan 2022 15:50:48 -0500
+  RenewTime:       Tue, 11 Jan 2022 15:56:55 -0500
 Conditions:
   Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
   ----             ------  -----------------                 ------------------                ------                       -------
-  MemoryPressure   False   Tue, 11 Jan 2022 15:48:09 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
-  DiskPressure     False   Tue, 11 Jan 2022 15:48:09 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
-  PIDPressure      False   Tue, 11 Jan 2022 15:48:09 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
-  Ready            True    Tue, 11 Jan 2022 15:48:09 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletReady                 kubelet is posting ready status
+  MemoryPressure   False   Tue, 11 Jan 2022 15:53:10 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 11 Jan 2022 15:53:10 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 11 Jan 2022 15:53:10 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 11 Jan 2022 15:53:10 -0500   Mon, 10 Jan 2022 13:03:28 -0500   KubeletReady                 kubelet is posting ready status
 Addresses:
   InternalIP:  192.168.49.2
   Hostname:    minikube
@@ -257,9 +257,9 @@ PodCIDRs:                     10.244.0.0/24
 Non-terminated Pods:          (10 in total)
   Namespace                   Name                                CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
   ---------                   ----                                ------------  ----------  ---------------  -------------  ---
-  default                     k8s-deployment-5985b97465-84jdl     0 (0%)        0 (0%)      0 (0%)           0 (0%)         23m
-  default                     k8s-deployment-5985b97465-dv6wv     0 (0%)        0 (0%)      0 (0%)           0 (0%)         23m
-  default                     k8s-deployment-5985b97465-hg58r     0 (0%)        0 (0%)      0 (0%)           0 (0%)         23m
+  default                     k8s-deployment-5985b97465-84jdl     0 (0%)        0 (0%)      0 (0%)           0 (0%)         29m
+  default                     k8s-deployment-5985b97465-dv6wv     0 (0%)        0 (0%)      0 (0%)           0 (0%)         29m
+  default                     k8s-deployment-5985b97465-hg58r     0 (0%)        0 (0%)      0 (0%)           0 (0%)         29m
   kube-system                 coredns-78fcd69978-d77sg            100m (1%)     0 (0%)      70Mi (0%)        170Mi (1%)     30h
   kube-system                 etcd-minikube                       100m (1%)     0 (0%)      100Mi (0%)       0 (0%)         30h
   kube-system                 kube-apiserver-minikube             250m (3%)     0 (0%)      0 (0%)           0 (0%)         30h
@@ -277,3 +277,34 @@ Allocated resources:
   hugepages-1Gi      0 (0%)      0 (0%)
   hugepages-2Mi      0 (0%)      0 (0%)
 Events:              <none>
+Name:                   k8s-deployment
+Namespace:              default
+CreationTimestamp:      Tue, 11 Jan 2022 15:27:15 -0500
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=sba-k8s
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=sba-k8s
+  Containers:
+   k8s-container:
+    Image:        buildapp/k8s-webapp
+    Port:         5000/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   k8s-deployment-5985b97465 (3/3 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  29m   deployment-controller  Scaled up replica set k8s-deployment-5985b97465 to 3
