@@ -14,11 +14,5 @@ pipeline {
          }
       }
     }
-     stage('Kubernetes Deploy') {
-      steps {
-         sh 'kubectl apply -f kubernetes.yml'
-         sh 'kubectl port-forward sba2022pod 7080:8080'
-       }
-     }
-   }
+  }
 }
