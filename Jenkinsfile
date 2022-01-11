@@ -6,7 +6,7 @@ pipeline {
                checkout scm
                }
           }
-          stage('Build Imafe') {
+          stage('Build Image') {
                steps {
                sh 'sudo docker build -t 19841022/test3 .'
                }
@@ -14,12 +14,12 @@ pipeline {
          stage('Run Image') {
                steps {
                sh 'sudo docker run -d --name myapptest 19841022/test3'
+               }
          }
          stage('Testing') {
               steps {
                     echo 'Testing...'
                     }
          }
-      }
 }
   
