@@ -1,10 +1,13 @@
 FROM python:3.8
 
-COPY . /app
+WORKDIR C:\Users\getum\sba2022.kubernetes-cluster
 
-WORKDIR /app
+COPY . .
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD python web.py
+EXPOSE 5000
+
+CMD ["python", "./web.py"]
+
 
