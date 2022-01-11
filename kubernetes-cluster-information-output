@@ -1,0 +1,23 @@
+Kubernetes Cluster Information\n\n
+    Cluster Info
+[0;32mKubernetes control plane[0m is running at [0;33mhttps://192.168.49.2:8443[0m
+[0;32mCoreDNS[0m is running at [0;33mhttps://192.168.49.2:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy[0m
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+    Kubernetes Deployments
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+web-sba   3/3     3            3           147m
+    Kubernetes Services
+NAME      TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+web-sba   LoadBalancer   10.111.141.49   <pending>     8080:30128/TCP   147m
+    Kubernetes Pods
+NAME                       READY   STATUS    RESTARTS      AGE
+web-sba-6c8f9c9ffb-5lj7d   1/1     Running   1 (95m ago)   147m
+web-sba-6c8f9c9ffb-8k779   1/1     Running   1 (95m ago)   147m
+web-sba-6c8f9c9ffb-9qw9t   1/1     Running   1 (95m ago)   147m
+    Kubernetes Nodes
+NAME       STATUS   ROLES                  AGE    VERSION
+minikube   Ready    control-plane,master   6d4h   v1.22.3
+    Kubernetes IP Addresses
+NAME       STATUS   ROLES                  AGE    VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+minikube   Ready    control-plane,master   6d4h   v1.22.3   192.168.49.2   <none>        Ubuntu 20.04.2 LTS   5.4.0-91-generic   docker://20.10.8
