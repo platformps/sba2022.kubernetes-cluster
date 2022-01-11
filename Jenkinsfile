@@ -23,7 +23,7 @@ pipeline {
        sh 'kubectl apply -t kubernetes.yml'
        sh 'kubectl port-forward sba2022pod 7080:8080'
        }
-      }
-    }
-  }
+     }
+   }
 }
+
