@@ -6,35 +6,24 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ========================================================================================
 ==================== Getting the list of created services ==============================
 NAME             TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
-balanced         LoadBalancer   10.99.6.112     <pending>     8080:31046/TCP   6d5h
-hello-minikube   NodePort       10.111.163.78   <none>        8080:32533/TCP   6d5h
-kubernetes       ClusterIP      10.96.0.1       <none>        443/TCP          6d5h
-my-nginx-svc     LoadBalancer   10.104.91.67    <pending>     80:32253/TCP     5d4h
+balanced         LoadBalancer   10.99.6.112     <pending>     8080:31046/TCP   6d11h
+hello-minikube   NodePort       10.111.163.78   <none>        8080:32533/TCP   6d11h
+kubernetes       ClusterIP      10.96.0.1       <none>        443/TCP          6d11h
+my-nginx-svc     LoadBalancer   10.104.91.67    <pending>     80:32253/TCP     5d10h
 ========================================================================================
 ==================== Getting the list of deployment ====================================
 NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
-balanced              1/1     1            1           6d5h
-hello-minikube        1/1     1            1           6d5h
-kubernetes-bootcamp   2/2     2            2           5d4h
-my-nginx              3/3     3            3           5d4h
+uma-deploy            3/3     3            3           4h53m
 ========================================================================================
 ==================== Getting the list of the pods ======================================
-NAME                                  READY   STATUS    RESTARTS      AGE
-balanced-5744b548b4-989l5             1/1     Running   6 (20h ago)   6d5h
-hello-minikube-6ddfcc9757-fbzdk       1/1     Running   6 (20h ago)   6d5h
-kubernetes-bootcamp-769746fd4-fwntv   1/1     Running   1 (20h ago)   30h
-kubernetes-bootcamp-769746fd4-p64b6   1/1     Running   1 (20h ago)   30h
-my-nginx-66b6c48dd5-2n5vg             1/1     Running   4 (20h ago)   5d4h
-my-nginx-66b6c48dd5-lzw2c             1/1     Running   4 (20h ago)   5d4h
-my-nginx-66b6c48dd5-trv6q             1/1     Running   4 (20h ago)   5d4h
+NAME                                   READY   STATUS             RESTARTS      AGE
+uma-deploy-8f567cd5c-b8ggx             1/1     Running            0             18m
+uma-deploy-8f567cd5c-kxbk8             1/1     Running            0             22m
+uma-deploy-8f567cd5c-qgt98             1/1     Running            0             18m
 ========================================================================================
-NAME                                  READY   STATUS    RESTARTS      AGE    IP            NODE       NOMINATED NODE   READINESS GATES
-balanced-5744b548b4-989l5             1/1     Running   6 (20h ago)   6d5h   172.17.0.9    minikube   <none>           <none>
-hello-minikube-6ddfcc9757-fbzdk       1/1     Running   6 (20h ago)   6d5h   172.17.0.11   minikube   <none>           <none>
-kubernetes-bootcamp-769746fd4-fwntv   1/1     Running   1 (20h ago)   30h    172.17.0.3    minikube   <none>           <none>
-kubernetes-bootcamp-769746fd4-p64b6   1/1     Running   1 (20h ago)   30h    172.17.0.6    minikube   <none>           <none>
-my-nginx-66b6c48dd5-2n5vg             1/1     Running   4 (20h ago)   5d4h   172.17.0.7    minikube   <none>           <none>
-my-nginx-66b6c48dd5-lzw2c             1/1     Running   4 (20h ago)   5d4h   172.17.0.4    minikube   <none>           <none>
-my-nginx-66b6c48dd5-trv6q             1/1     Running   4 (20h ago)   5d4h   172.17.0.5    minikube   <none>           <none>
+NAME                                   READY   STATUS             RESTARTS      AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+uma-deploy-8f567cd5c-b8ggx             1/1     Running            0             18m     172.17.0.18   minikube   <none>           <none>
+uma-deploy-8f567cd5c-kxbk8             1/1     Running            0             22m     172.17.0.17   minikube   <none>           <none>
+uma-deploy-8f567cd5c-qgt98             1/1     Running            0             18m     172.17.0.16   minikube   <none>           <none>
 ========================================================================================
-======================
+

@@ -1,20 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sba-2022-kubernetes
+  creationTimestamp: null
+  labels:
+    app: uma-deploy
+  name: uma-deploy
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: sba-2022-kubernetes
-  replicas: 3 # tells deployment to run 2 pods matching the template
+      app: uma-deploy
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
-        app: sba-2022-kubernetes
+        app: uma-deploy
     spec:
       containers:
-      - name: sba-2022-kubernetes
-        image: umamages/sba-2022-kubernetes/
+      - image: umamages/sba2022.kubernetes-cluster
+        name: sba2022-kubernetes-cluster-s8kw4
         resources: {}
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always
+status: {}
