@@ -1,0 +1,145 @@
+Started by user Emine Dogan
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/SBAimage
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/eminegit/sba2022.kubernetes-cluster.git
+ > git init /var/lib/jenkins/workspace/SBAimage # timeout=10
+Fetching upstream changes from https://github.com/eminegit/sba2022.kubernetes-cluster.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+ > git fetch --tags --force --progress -- https://github.com/eminegit/sba2022.kubernetes-cluster.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/eminegit/sba2022.kubernetes-cluster.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision b96ea1b249c4c8ae118231a0d947dae5b692cc4d (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b96ea1b249c4c8ae118231a0d947dae5b692cc4d # timeout=10
+Commit message: "Merge branch 'platformps:master' into master"
+First time build. Skipping changelog.
+[SBAimage] $ docker build -t emined/jenkinsimage --pull=true /var/lib/jenkins/workspace/SBAimage
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Sending build context to Docker daemon  7.403MB
+Step 1/5 : FROM python:3.7
+3.7: Pulling from library/python
+0e29546d541c: Pulling fs layer
+9b829c73b52b: Pulling fs layer
+cb5b7ae36172: Pulling fs layer
+6494e4811622: Pulling fs layer
+6f9f74896dfa: Pulling fs layer
+fcb6d5f7c986: Pulling fs layer
+7a72d131c196: Pulling fs layer
+c4221d178521: Pulling fs layer
+71d5c5b5a91f: Pulling fs layer
+c4221d178521: Waiting
+71d5c5b5a91f: Waiting
+fcb6d5f7c986: Waiting
+6494e4811622: Waiting
+6f9f74896dfa: Waiting
+7a72d131c196: Waiting
+9b829c73b52b: Verifying Checksum
+9b829c73b52b: Download complete
+cb5b7ae36172: Verifying Checksum
+cb5b7ae36172: Download complete
+0e29546d541c: Download complete
+fcb6d5f7c986: Verifying Checksum
+fcb6d5f7c986: Download complete
+6494e4811622: Verifying Checksum
+6494e4811622: Download complete
+c4221d178521: Verifying Checksum
+c4221d178521: Download complete
+7a72d131c196: Verifying Checksum
+7a72d131c196: Download complete
+71d5c5b5a91f: Verifying Checksum
+71d5c5b5a91f: Download complete
+0e29546d541c: Pull complete
+6f9f74896dfa: Verifying Checksum
+6f9f74896dfa: Download complete
+9b829c73b52b: Pull complete
+cb5b7ae36172: Pull complete
+6494e4811622: Pull complete
+6f9f74896dfa: Pull complete
+fcb6d5f7c986: Pull complete
+7a72d131c196: Pull complete
+c4221d178521: Pull complete
+71d5c5b5a91f: Pull complete
+Digest: sha256:d9abbc0737ff8d23a546859c85903f1b8235a1495a405d5a47cbc55747f27b20
+Status: Downloaded newer image for python:3.7
+ ---> ad37de9b03ef
+Step 2/5 : COPY . /app
+ ---> d22ede8159ea
+Step 3/5 : WORKDIR /app
+ ---> Running in b2a62f06883c
+Removing intermediate container b2a62f06883c
+ ---> c5dfc816eda4
+Step 4/5 : RUN pip install -r requirements.txt
+ ---> Running in c21c9f6fa8fe
+Collecting Flask==0.12
+  Downloading Flask-0.12-py2.py3-none-any.whl (82 kB)
+Collecting click>=2.0
+  Downloading click-8.0.3-py3-none-any.whl (97 kB)
+Collecting Werkzeug>=0.7
+  Downloading Werkzeug-2.0.2-py3-none-any.whl (288 kB)
+Collecting Jinja2>=2.4
+  Downloading Jinja2-3.0.3-py3-none-any.whl (133 kB)
+Collecting itsdangerous>=0.21
+  Downloading itsdangerous-2.0.1-py3-none-any.whl (18 kB)
+Collecting importlib-metadata
+  Downloading importlib_metadata-4.10.0-py3-none-any.whl (17 kB)
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.0.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (31 kB)
+Collecting zipp>=0.5
+  Downloading zipp-3.7.0-py3-none-any.whl (5.3 kB)
+Collecting typing-extensions>=3.6.4
+  Downloading typing_extensions-4.0.1-py3-none-any.whl (22 kB)
+Installing collected packages: zipp, typing-extensions, MarkupSafe, importlib-metadata, Werkzeug, Jinja2, itsdangerous, click, Flask
+Successfully installed Flask-0.12 Jinja2-3.0.3 MarkupSafe-2.0.1 Werkzeug-2.0.2 click-8.0.3 importlib-metadata-4.10.0 itsdangerous-2.0.1 typing-extensions-4.0.1 zipp-3.7.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[0mRemoving intermediate container c21c9f6fa8fe
+ ---> cd16c68b6dc0
+Step 5/5 : CMD ["python","web.py"]
+ ---> Running in 67fdc7b41da4
+Removing intermediate container 67fdc7b41da4
+ ---> 6a988f1220a1
+Successfully built 6a988f1220a1
+Successfully tagged emined/jenkinsimage:latest
+[SBAimage] $ docker inspect 6a988f1220a1
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+[SBAimage] $ docker push emined/jenkinsimage
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Using default tag: latest
+The push refers to repository [docker.io/emined/jenkinsimage]
+1237498e554d: Preparing
+f187f10502fb: Preparing
+11088eb5307c: Preparing
+d86f8b9fa813: Preparing
+86c81640d929: Preparing
+aedcb370b058: Preparing
+c3a0d593ed24: Preparing
+26a504e63be4: Preparing
+8bf42db0de72: Preparing
+31892cc314cb: Preparing
+11936051f93b: Preparing
+aedcb370b058: Waiting
+c3a0d593ed24: Waiting
+26a504e63be4: Waiting
+31892cc314cb: Waiting
+8bf42db0de72: Waiting
+11936051f93b: Waiting
+11088eb5307c: Mounted from library/python
+d86f8b9fa813: Mounted from library/python
+86c81640d929: Mounted from library/python
+aedcb370b058: Mounted from library/python
+c3a0d593ed24: Mounted from library/python
+26a504e63be4: Mounted from library/python
+8bf42db0de72: Mounted from library/python
+31892cc314cb: Mounted from library/python
+11936051f93b: Mounted from library/python
+f187f10502fb: Pushed
+1237498e554d: Pushed
+latest: digest: sha256:31c844c038495a1af2b83f8677fd7723662565a1e47136f4d55773d2ac652ddb size: 2640
+Finished: SUCCESS
