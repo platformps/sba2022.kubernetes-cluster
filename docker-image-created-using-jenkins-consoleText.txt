@@ -1,0 +1,113 @@
+Started by user Christopher Yang
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\SBA Image
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\SBA Image\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/cyanggit/sba2022.kubernetes-cluster.git # timeout=10
+Fetching upstream changes from https://github.com/cyanggit/sba2022.kubernetes-cluster.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.34.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/cyanggit/sba2022.kubernetes-cluster.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision ee2e72264551c020e98d0357eace792f279a1d98 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f ee2e72264551c020e98d0357eace792f279a1d98 # timeout=10
+Commit message: "Merge branch 'platformps:master' into master"
+ > git.exe rev-list --no-walk ee2e72264551c020e98d0357eace792f279a1d98 # timeout=10
+[SBA Image] $ docker build -t yang97docker/jenkinsimage --pull=true "C:\ProgramData\Jenkins\.jenkins\workspace\SBA Image"
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+#1 [internal] load build definition from Dockerfile
+#1 sha256:ca67fbc9ab29d99e73e4d88c797d3541e0b632cf9635f264fa8cac4bede9412f
+#1 transferring dockerfile: 31B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load .dockerignore
+#2 sha256:3632dc56d3f03700df7806be550192e352cb71aa8555006dac426f84d8ace91f
+#2 transferring context:
+#2 transferring context: 2B 0.0s done
+#2 DONE 0.2s
+
+#3 [internal] load metadata for docker.io/library/python:3.7
+#3 sha256:2e83735093f2e645c7660e349795ae80186113afc054af8bdc7501e99da12131
+#3 ...
+
+#4 [auth] library/python:pull token for registry-1.docker.io
+#4 sha256:0cbe15f75b0b6461b5b83c0cdb16a3a73bb8680ddb5c3b172f6cad4ed1077fad
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.7
+#3 sha256:2e83735093f2e645c7660e349795ae80186113afc054af8bdc7501e99da12131
+#3 DONE 1.6s
+
+#5 [1/4] FROM docker.io/library/python:3.7@sha256:d9abbc0737ff8d23a546859c85903f1b8235a1495a405d5a47cbc55747f27b20
+#5 sha256:78d96b187172f9edacdca7a5631287c4e89e2d243ee494fd9a7c621ddb88a1e6
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 sha256:4ce2910355653fa81e1f027237f8f8c65818918f83e2cdb9eb36bbd949a5c984
+#6 transferring context: 13.82kB 1.7s done
+#6 DONE 2.0s
+
+#7 [2/4] COPY . /app
+#7 sha256:3e07cacc8ca823d2d01ea2832fd91615d9e9aceab7d5646ade4da3970cc82cf0
+#7 CACHED
+
+#8 [3/4] WORKDIR /app
+#8 sha256:48db1fc14292defe75d059206c8ca75b8115c5be8f6446cf43a0752135446b28
+#8 CACHED
+
+#9 [4/4] RUN pip install -r requirements.txt
+#9 sha256:6165e185e8f18806499a9f2208b4531996e1ecc7a6438bab2abd7604be211414
+#9 CACHED
+
+#10 exporting to image
+#10 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#10 exporting layers done
+#10 writing image sha256:b0fbd0510b03626dd3c81c4959a757a27bfc134e2c373bd9fde40863ed6bb2d6 0.1s done
+#10 naming to docker.io/yang97docker/jenkinsimage done
+#10 DONE 0.6s
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+[SBA Image] $ docker push yang97docker/jenkinsimage
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Using default tag: latest
+The push refers to repository [docker.io/yang97docker/jenkinsimage]
+126c5cad3edf: Preparing
+5f70bf18a086: Preparing
+b5a2ab634b07: Preparing
+11088eb5307c: Preparing
+d86f8b9fa813: Preparing
+86c81640d929: Preparing
+aedcb370b058: Preparing
+c3a0d593ed24: Preparing
+26a504e63be4: Preparing
+8bf42db0de72: Preparing
+31892cc314cb: Preparing
+11936051f93b: Preparing
+86c81640d929: Waiting
+aedcb370b058: Waiting
+c3a0d593ed24: Waiting
+26a504e63be4: Waiting
+8bf42db0de72: Waiting
+31892cc314cb: Waiting
+11936051f93b: Waiting
+11088eb5307c: Mounted from yang97docker/sbaimage
+d86f8b9fa813: Mounted from yang97docker/sbaimage
+5f70bf18a086: Mounted from yang97docker/sbaimage
+c3a0d593ed24: Mounted from yang97docker/sbaimage
+86c81640d929: Mounted from yang97docker/sbaimage
+aedcb370b058: Mounted from yang97docker/sbaimage
+26a504e63be4: Mounted from yang97docker/sbaimage
+8bf42db0de72: Mounted from yang97docker/sbaimage
+31892cc314cb: Mounted from yang97docker/sbaimage
+11936051f93b: Mounted from yang97docker/sbaimage
+126c5cad3edf: Pushed
+b5a2ab634b07: Pushed
+latest: digest: sha256:b0e3e1efff4316530a15d1a775e4518a4c85500e5cb6ca37cac2b3425e9b155e size: 2846
+Finished: SUCCESS
