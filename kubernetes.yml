@@ -23,7 +23,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      purpose: kube-sba
+      app: web.py
   template:
     metadata:
       labels:
