@@ -1,0 +1,13 @@
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+balanced         1/1     1            1           6d3h
+hello-minikube   1/1     1            1           6d3h
+NAME                              READY   STATUS    RESTARTS      AGE
+balanced-5744b548b4-jq7x6         1/1     Running   2 (30h ago)   6d3h
+hello-minikube-6ddfcc9757-lzwcw   1/1     Running   2 (30h ago)   6d3h
+mysql-client                      1/1     Running   0             24h
+sba2022pod                        1/1     Running   0             8m10s
+NAME       STATUS   ROLES                  AGE    VERSION
+minikube   Ready    control-plane,master   6d4h   v1.22.3
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+balanced         1/1     1            1           6d3h
+hello-minikube   1/1     1            1           6d3h
