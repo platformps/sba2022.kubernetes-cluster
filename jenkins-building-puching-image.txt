@@ -1,0 +1,143 @@
+Started by user mamoun janfor
+Obtained Jenkinsfile from git https://github.com/mamounjanfor/sba2022.kubernetes-cluster.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/test-pipline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/test-pipline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mamounjanfor/sba2022.kubernetes-cluster.git # timeout=10
+Fetching upstream changes from https://github.com/mamounjanfor/sba2022.kubernetes-cluster.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+ > git fetch --tags --force --progress -- https://github.com/mamounjanfor/sba2022.kubernetes-cluster.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision c8f275d9d3a1fd37febc518fb3f4246a37dcc639 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c8f275d9d3a1fd37febc518fb3f4246a37dcc639 # timeout=10
+Commit message: "Update Jenkinsfile"
+ > git rev-list --no-walk c8f275d9d3a1fd37febc518fb3f4246a37dcc639 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clone Repository)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/test-pipline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mamounjanfor/sba2022.kubernetes-cluster.git # timeout=10
+Fetching upstream changes from https://github.com/mamounjanfor/sba2022.kubernetes-cluster.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+ > git fetch --tags --force --progress -- https://github.com/mamounjanfor/sba2022.kubernetes-cluster.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision c8f275d9d3a1fd37febc518fb3f4246a37dcc639 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c8f275d9d3a1fd37febc518fb3f4246a37dcc639 # timeout=10
+Commit message: "Update Jenkinsfile"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build Image)
+[Pipeline] sh
++ docker build -t 19841022/test3 .
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Sending build context to Docker daemon  7.267MB
+
+Step 1/5 : FROM python
+ ---> a5d7930b60cc
+Step 2/5 : COPY . /app
+ ---> Using cache
+ ---> ab468211af1d
+Step 3/5 : WORKDIR /app
+ ---> Using cache
+ ---> ac1516f6d32f
+Step 4/5 : RUN pip install -r requirements.txt
+ ---> Running in e3fcd53062c5
+Collecting Flask==0.12
+  Downloading Flask-0.12-py2.py3-none-any.whl (82 kB)
+Collecting Werkzeug>=0.7
+  Downloading Werkzeug-2.0.2-py3-none-any.whl (288 kB)
+Collecting itsdangerous>=0.21
+  Downloading itsdangerous-2.0.1-py3-none-any.whl (18 kB)
+Collecting click>=2.0
+  Downloading click-8.0.3-py3-none-any.whl (97 kB)
+Collecting Jinja2>=2.4
+  Downloading Jinja2-3.0.3-py3-none-any.whl (133 kB)
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (30 kB)
+Installing collected packages: MarkupSafe, Werkzeug, Jinja2, itsdangerous, click, Flask
+Successfully installed Flask-0.12 Jinja2-3.0.3 MarkupSafe-2.0.1 Werkzeug-2.0.2 click-8.0.3 itsdangerous-2.0.1
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[0m[91mWARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[0mRemoving intermediate container e3fcd53062c5
+ ---> 557b03f3d07b
+Step 5/5 : CMD ["python"," web.py"]
+ ---> Running in 81356eb1eae9
+Removing intermediate container 81356eb1eae9
+ ---> d53767e81f6f
+Successfully built d53767e81f6f
+Successfully tagged 19841022/test3:latest
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push image)
+[Pipeline] sh
++ docker push 19841022/test3
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Using default tag: latest
+The push refers to repository [docker.io/19841022/test3]
+870581083ac7: Preparing
+d015f854b6f5: Preparing
+db8d0fe6cf95: Preparing
+00901a4c6fc7: Preparing
+7e7decd61f68: Preparing
+aedcb370b058: Preparing
+c3a0d593ed24: Preparing
+26a504e63be4: Preparing
+8bf42db0de72: Preparing
+31892cc314cb: Preparing
+11936051f93b: Preparing
+aedcb370b058: Waiting
+c3a0d593ed24: Waiting
+26a504e63be4: Waiting
+8bf42db0de72: Waiting
+31892cc314cb: Waiting
+11936051f93b: Waiting
+00901a4c6fc7: Mounted from 19841022/sba-image
+db8d0fe6cf95: Mounted from 19841022/sba-image
+7e7decd61f68: Mounted from 19841022/sba-image
+c3a0d593ed24: Mounted from 19841022/sba-image
+aedcb370b058: Mounted from 19841022/sba-image
+26a504e63be4: Mounted from 19841022/sba-image
+8bf42db0de72: Mounted from 19841022/sba-image
+31892cc314cb: Mounted from 19841022/sba-image
+d015f854b6f5: Pushed
+11936051f93b: Mounted from 19841022/sba-image
+870581083ac7: Pushed
+latest: digest: sha256:37f2a597df2a0c8c7f7125161575948c2b39fb4bcedc2e805fceba60966e0495 size: 2640
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Testing)
+[Pipeline] echo
+Testing...
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
