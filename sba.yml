@@ -4,7 +4,7 @@ metadata:
   name: sba-deployment
 spec:
   selector:
-    app: sba
+    app: web.py
   ports:
   - protocol: TCP
     port: 8080
@@ -18,7 +18,7 @@ kind: Deployment
 metadata:
   name: sba-deployment
   labels:
-    app: sba
+    app: web.py
 spec:
   replicas: 1
   selector:
