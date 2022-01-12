@@ -8,7 +8,7 @@ pipeline {
           }
           stage('Build Image') {
                steps {
-               sh 'sudo docker build -t 19841022/test3 .'
+               sh "docker build -t 19841022/test3 ."
                }
          }
          stage('Run Image') {
