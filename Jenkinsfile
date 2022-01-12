@@ -11,9 +11,9 @@ pipeline {
                sh "docker build -t 19841022/test3 ."
                }
          }
-         stage('Run Image') {
+         stage('Push image') {
                steps {
-               sh 'sudo docker run -d --name myapptest 19841022/test3'
+               sh 'docker push 19841022/test3'
                }
          }
          stage('Testing') {
