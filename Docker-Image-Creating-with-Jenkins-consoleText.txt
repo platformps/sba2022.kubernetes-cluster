@@ -1,0 +1,80 @@
+Started by user jnoel
+Running as SYSTEM
+[EnvInject] - Loading node environment variables.
+Building on the built-in node in workspace /var/lib/jenkins/workspace/jenkins-docker-integration
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/jenkins-docker-integration/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/johnenoel/sba2022.kubernetes-cluster-Jan10.git # timeout=10
+Fetching upstream changes from https://github.com/johnenoel/sba2022.kubernetes-cluster-Jan10.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.32.0'
+ > git fetch --tags --force --progress -- https://github.com/johnenoel/sba2022.kubernetes-cluster-Jan10.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 722e7b8d7aee9820b2bebfe31e26f31b879d220f (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 722e7b8d7aee9820b2bebfe31e26f31b879d220f # timeout=10
+Commit message: "2nd commit of the shell script"
+ > git rev-list --no-walk 722e7b8d7aee9820b2bebfe31e26f31b879d220f # timeout=10
+[jenkins-docker-integration] $ /bin/sh -xe /tmp/jenkins9421910677313803355.sh
++ echo 'this is test'
+this is test
+[jenkins-docker-integration] $ docker build -t johnenoel/k8s-sba-image --pull=true /var/lib/jenkins/workspace/jenkins-docker-integration
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Sending build context to Docker daemon  7.437MB
+Step 1/5 : FROM python
+latest: Pulling from library/python
+Digest: sha256:6d2551cd76593672929813669bf7fbbd2f2c454a400b084a87122dc12fef8563
+Status: Image is up to date for python:latest
+ ---> a5d7930b60cc
+Step 2/5 : COPY . /app
+ ---> Using cache
+ ---> 3acfc4d05bc6
+Step 3/5 : WORKDIR /app
+ ---> Using cache
+ ---> 23a591d3fb04
+Step 4/5 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> b9ab70f27040
+Step 5/5 : CMD ["python","web.py"]
+ ---> Using cache
+ ---> 5772a83e34bb
+Successfully built 5772a83e34bb
+Successfully tagged johnenoel/k8s-sba-image:latest
+[jenkins-docker-integration] $ docker inspect 5772a83e34bb
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+[jenkins-docker-integration] $ docker push johnenoel/k8s-sba-image
+WARNING: Support for the legacy ~/.dockercfg configuration file and file-format is deprecated and will be removed in an upcoming release
+Using default tag: latest
+The push refers to repository [docker.io/johnenoel/k8s-sba-image]
+76d92eb4a1e9: Preparing
+e6ff401964bc: Preparing
+db8d0fe6cf95: Preparing
+00901a4c6fc7: Preparing
+7e7decd61f68: Preparing
+aedcb370b058: Preparing
+c3a0d593ed24: Preparing
+26a504e63be4: Preparing
+8bf42db0de72: Preparing
+31892cc314cb: Preparing
+11936051f93b: Preparing
+aedcb370b058: Waiting
+c3a0d593ed24: Waiting
+26a504e63be4: Waiting
+8bf42db0de72: Waiting
+31892cc314cb: Waiting
+11936051f93b: Waiting
+00901a4c6fc7: Mounted from johnenoel/next-image
+e6ff401964bc: Mounted from johnenoel/next-image
+7e7decd61f68: Mounted from johnenoel/next-image
+76d92eb4a1e9: Mounted from johnenoel/next-image
+db8d0fe6cf95: Mounted from johnenoel/next-image
+8bf42db0de72: Mounted from johnenoel/next-image
+26a504e63be4: Mounted from johnenoel/next-image
+aedcb370b058: Mounted from johnenoel/next-image
+c3a0d593ed24: Mounted from johnenoel/next-image
+31892cc314cb: Mounted from johnenoel/next-image
+11936051f93b: Mounted from johnenoel/next-image
+latest: digest: sha256:c2dd5771a5a4fd138ad76052fefc012d073d214b46b9b2ab19baea878bed47c6 size: 2640
+Finished: SUCCESS
