@@ -27,5 +27,11 @@ spec:
   template:
     metadata:
       labels:
-        purpose: kube-sba
+        app: web.py
+    spec:
+      containers:
+      - name: webserver
+        image: spencerhurrle/kubetastic:latest
+        ports:
+        - containerPort: 8080
 
