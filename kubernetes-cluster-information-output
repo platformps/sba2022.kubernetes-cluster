@@ -1,0 +1,30 @@
+==================== Getting the state of the cluster ==================================
+Kubernetes control plane is running at https://127.0.0.1:1033
+CoreDNS is running at https://127.0.0.1:1033/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+========================================================================================
+==================== Getting the list of created services ==============================
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   6d7h
+========================================================================================
+==================== Getting the list of deployment ====================================
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+myapp-deployment   3/3     3            3           10m
+========================================================================================
+==================== Getting the list of the pods ======================================
+NAME                               READY   STATUS    RESTARTS   AGE
+myapp-deployment-d86866f9c-bn4m8   1/1     Running   0          10m
+myapp-deployment-d86866f9c-gmqhm   1/1     Running   0          10m
+myapp-deployment-d86866f9c-xvflt   1/1     Running   0          10m
+========================================================================================
+NAME                               READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NODE   READINESS GATES
+myapp-deployment-d86866f9c-bn4m8   1/1     Running   0          10m   172.17.0.5   minikube   <none>           <none>
+myapp-deployment-d86866f9c-gmqhm   1/1     Running   0          10m   172.17.0.4   minikube   <none>           <none>
+myapp-deployment-d86866f9c-xvflt   1/1     Running   0          10m   172.17.0.3   minikube   <none>           <none>
+========================================================================================
+NAME                               READY   STATUS    RESTARTS   AGE
+myapp-deployment-d86866f9c-bn4m8   1/1     Running   0          10m
+myapp-deployment-d86866f9c-gmqhm   1/1     Running   0          10m
+myapp-deployment-d86866f9c-xvflt   1/1     Running   0          10m
+======================
