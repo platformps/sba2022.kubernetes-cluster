@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'python3 --version'
-                sh 'docker build -t kubetastic .'
+                sh 'docker build -t spencerhurrle/kubetastic:latest .'
             }
         }
     }
