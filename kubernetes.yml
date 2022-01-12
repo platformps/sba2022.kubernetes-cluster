@@ -30,8 +30,8 @@ spec:
         app: web.py
     spec:
       containers:
-      - name: webserver
+      - name: web.py
         image: spencerhurrle/kubetastic:latest
         ports:
-        - containerPort: 8080
-
+        - containerPort: 5000
+        imagePullPolicy: IfNotPresent
