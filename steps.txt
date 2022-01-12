@@ -1,0 +1,2 @@
+docker build -t web .
+docker run --name mycontainer -p 5000:5000 -d web
