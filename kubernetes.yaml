@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: johnenoel/k8ssba
+        image: 19841022/sba-image
         resources: {}
       dnsPolicy: ClusterFirst
       restartPolicy: Always

@@ -7,4 +7,4 @@ kubectl get pod -o wide
 kubectl get pods -l app=myapp
 kubectl get nodes
 kubectl get replicaset
-
+minikube ip
