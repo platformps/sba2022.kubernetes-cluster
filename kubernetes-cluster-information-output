@@ -1,0 +1,29 @@
+==================== Getting the state of the cluster ==================================
+Kubernetes control plane is running at https://127.0.0.1:56406
+CoreDNS is running at https://127.0.0.1:56406/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+========================================================================================
+==================== Getting the list of created services ==============================
+NAME             TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+balanced         LoadBalancer   10.99.6.112     <pending>     8080:31046/TCP   6d11h
+hello-minikube   NodePort       10.111.163.78   <none>        8080:32533/TCP   6d11h
+kubernetes       ClusterIP      10.96.0.1       <none>        443/TCP          6d11h
+my-nginx-svc     LoadBalancer   10.104.91.67    <pending>     80:32253/TCP     5d10h
+========================================================================================
+==================== Getting the list of deployment ====================================
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+uma-deploy            3/3     3            3           4h53m
+========================================================================================
+==================== Getting the list of the pods ======================================
+NAME                                   READY   STATUS             RESTARTS      AGE
+uma-deploy-8f567cd5c-b8ggx             1/1     Running            0             18m
+uma-deploy-8f567cd5c-kxbk8             1/1     Running            0             22m
+uma-deploy-8f567cd5c-qgt98             1/1     Running            0             18m
+========================================================================================
+NAME                                   READY   STATUS             RESTARTS      AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+uma-deploy-8f567cd5c-b8ggx             1/1     Running            0             18m     172.17.0.18   minikube   <none>           <none>
+uma-deploy-8f567cd5c-kxbk8             1/1     Running            0             22m     172.17.0.17   minikube   <none>           <none>
+uma-deploy-8f567cd5c-qgt98             1/1     Running            0             18m     172.17.0.16   minikube   <none>           <none>
+========================================================================================
+

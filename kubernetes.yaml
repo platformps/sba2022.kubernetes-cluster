@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: uma-deploy
+  name: uma-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: uma-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: uma-deploy
+    spec:
+      containers:
+      - image: umamages/sba2022.kubernetes-cluster
+        name: sba2022-kubernetes-cluster-s8kw4
+        resources: {}
+status: {}
