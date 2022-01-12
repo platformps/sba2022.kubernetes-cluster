@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sba-deployment
+  labels:
+    purpose: kube-sba
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      purpose: kube-sba
+  template:
+    metadata:
+      labels:
+        purpose: kube-sba
+
