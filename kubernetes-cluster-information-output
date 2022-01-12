@@ -1,0 +1,314 @@
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.96.0.1
+IPs:               10.96.0.1
+Port:              https  443/TCP
+TargetPort:        8443/TCP
+Endpoints:         192.168.49.2:8443
+Session Affinity:  None
+Events:            <none>
+Name:         sba-k8s-97d847d68-nngmh
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Tue, 11 Jan 2022 18:10:27 -0500
+Labels:       app.kubernetes.io/name=load-balancer-sba-k8s
+              pod-template-hash=97d847d68
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.2
+IPs:
+  IP:           172.17.0.2
+Controlled By:  ReplicaSet/sba-k8s-97d847d68
+Containers:
+  sba-k8s:
+    Container ID:   docker://13949314dddda74ebe0138075bb74274d9703ac01e2b2131d36f8145a571dc32
+    Image:          sba-k8s:latest
+    Image ID:       docker://sha256:cf559561804bc956d09ca9d183196c6788733e169451511311d22647155fedb7
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Jan 2022 21:21:39 -0500
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    255
+      Started:      Tue, 11 Jan 2022 18:10:29 -0500
+      Finished:     Tue, 11 Jan 2022 21:21:16 -0500
+    Ready:          True
+    Restart Count:  1
+    Environment:
+      KLAUS_PORT:  8080
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-qhvdh (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-qhvdh:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age    From     Message
+  ----    ------          ----   ----     -------
+  Normal  SandboxChanged  2m19s  kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          2m18s  kubelet  Container image "sba-k8s:latest" already present on machine
+  Normal  Created         2m18s  kubelet  Created container sba-k8s
+  Normal  Started         2m18s  kubelet  Started container sba-k8s
+
+
+Name:         sba-k8s-97d847d68-pffdn
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Tue, 11 Jan 2022 18:10:27 -0500
+Labels:       app.kubernetes.io/name=load-balancer-sba-k8s
+              pod-template-hash=97d847d68
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.4
+IPs:
+  IP:           172.17.0.4
+Controlled By:  ReplicaSet/sba-k8s-97d847d68
+Containers:
+  sba-k8s:
+    Container ID:   docker://ece0e1304d344df215beb875367ef13669277820fc0c5151f0e4f270da76e0d8
+    Image:          sba-k8s:latest
+    Image ID:       docker://sha256:cf559561804bc956d09ca9d183196c6788733e169451511311d22647155fedb7
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Jan 2022 21:21:41 -0500
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    255
+      Started:      Tue, 11 Jan 2022 18:10:29 -0500
+      Finished:     Tue, 11 Jan 2022 21:21:16 -0500
+    Ready:          True
+    Restart Count:  1
+    Environment:
+      KLAUS_PORT:  8080
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-t5752 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-t5752:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age    From     Message
+  ----    ------          ----   ----     -------
+  Normal  SandboxChanged  2m19s  kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          2m17s  kubelet  Container image "sba-k8s:latest" already present on machine
+  Normal  Created         2m17s  kubelet  Created container sba-k8s
+  Normal  Started         2m16s  kubelet  Started container sba-k8s
+
+
+Name:         sba-k8s-97d847d68-x5xrb
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Tue, 11 Jan 2022 18:10:27 -0500
+Labels:       app.kubernetes.io/name=load-balancer-sba-k8s
+              pod-template-hash=97d847d68
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.3
+IPs:
+  IP:           172.17.0.3
+Controlled By:  ReplicaSet/sba-k8s-97d847d68
+Containers:
+  sba-k8s:
+    Container ID:   docker://1d01bbe5c61cf81302c4b232fdc216764d672b14965a8939012a5238c9154022
+    Image:          sba-k8s:latest
+    Image ID:       docker://sha256:cf559561804bc956d09ca9d183196c6788733e169451511311d22647155fedb7
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Jan 2022 21:21:41 -0500
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    255
+      Started:      Tue, 11 Jan 2022 18:10:29 -0500
+      Finished:     Tue, 11 Jan 2022 21:21:16 -0500
+    Ready:          True
+    Restart Count:  1
+    Environment:
+      KLAUS_PORT:  8080
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-5spts (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-5spts:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age    From     Message
+  ----    ------          ----   ----     -------
+  Normal  SandboxChanged  2m19s  kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          2m17s  kubelet  Container image "sba-k8s:latest" already present on machine
+  Normal  Created         2m17s  kubelet  Created container sba-k8s
+  Normal  Started         2m16s  kubelet  Started container sba-k8s
+Name:               minikube
+Roles:              control-plane,master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=minikube
+                    kubernetes.io/os=linux
+                    minikube.k8s.io/commit=76b94fb3c4e8ac5062daf70d60cf03ddcc0a741b
+                    minikube.k8s.io/name=minikube
+                    minikube.k8s.io/updated_at=2022_01_11T17_47_12_0700
+                    minikube.k8s.io/version=v1.24.0
+                    node-role.kubernetes.io/control-plane=
+                    node-role.kubernetes.io/master=
+                    node.kubernetes.io/exclude-from-external-load-balancers=
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Tue, 11 Jan 2022 17:47:07 -0500
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  minikube
+  AcquireTime:     <unset>
+  RenewTime:       Tue, 11 Jan 2022 21:23:49 -0500
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Tue, 11 Jan 2022 21:21:37 -0500   Tue, 11 Jan 2022 17:47:01 -0500   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 11 Jan 2022 21:21:37 -0500   Tue, 11 Jan 2022 17:47:01 -0500   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 11 Jan 2022 21:21:37 -0500   Tue, 11 Jan 2022 17:47:01 -0500   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 11 Jan 2022 21:21:37 -0500   Tue, 11 Jan 2022 17:47:23 -0500   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.49.2
+  Hostname:    minikube
+Capacity:
+  cpu:                8
+  ephemeral-storage:  263174212Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             7817720Ki
+  pods:               110
+Allocatable:
+  cpu:                8
+  ephemeral-storage:  263174212Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             7817720Ki
+  pods:               110
+System Info:
+  Machine ID:                 bba0be70c47c400ea3cf7733f1c0b4c1
+  System UUID:                bba0be70c47c400ea3cf7733f1c0b4c1
+  Boot ID:                    e3d98151-57e8-4307-afde-98237f987a04
+  Kernel Version:             5.10.16.3-microsoft-standard-WSL2
+  OS Image:                   Ubuntu 20.04.2 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://20.10.8
+  Kubelet Version:            v1.22.3
+  Kube-Proxy Version:         v1.22.3
+PodCIDR:                      10.244.0.0/24
+PodCIDRs:                     10.244.0.0/24
+Non-terminated Pods:          (12 in total)
+  Namespace                   Name                                          CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                          ------------  ----------  ---------------  -------------  ---
+  default                     sba-k8s-97d847d68-nngmh                       0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h13m
+  default                     sba-k8s-97d847d68-pffdn                       0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h13m
+  default                     sba-k8s-97d847d68-x5xrb                       0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h13m
+  kube-system                 coredns-78fcd69978-t9gws                      100m (1%)     0 (0%)      70Mi (0%)        170Mi (2%)     3h36m
+  kube-system                 etcd-minikube                                 100m (1%)     0 (0%)      100Mi (1%)       0 (0%)         3h36m
+  kube-system                 kube-apiserver-minikube                       250m (3%)     0 (0%)      0 (0%)           0 (0%)         3h36m
+  kube-system                 kube-controller-manager-minikube              200m (2%)     0 (0%)      0 (0%)           0 (0%)         3h36m
+  kube-system                 kube-proxy-7867k                              0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h36m
+  kube-system                 kube-scheduler-minikube                       100m (1%)     0 (0%)      0 (0%)           0 (0%)         3h36m
+  kube-system                 storage-provisioner                           0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h36m
+  kubernetes-dashboard        dashboard-metrics-scraper-5594458c94-fqdh7    0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h1m
+  kubernetes-dashboard        kubernetes-dashboard-654cf69797-cng7x         0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h1m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                750m (9%)   0 (0%)
+  memory             170Mi (2%)  170Mi (2%)
+  ephemeral-storage  0 (0%)      0 (0%)
+  hugepages-1Gi      0 (0%)      0 (0%)
+  hugepages-2Mi      0 (0%)      0 (0%)
+Events:
+  Type    Reason                   Age                    From        Message
+  ----    ------                   ----                   ----        -------
+  Normal  Starting                 2m14s                  kube-proxy  
+  Normal  Starting                 2m28s                  kubelet     Starting kubelet.
+  Normal  NodeAllocatableEnforced  2m27s                  kubelet     Updated Node Allocatable limit across pods
+  Normal  NodeHasSufficientMemory  2m25s (x8 over 2m27s)  kubelet     Node minikube status is now: NodeHasSufficientMemory
+  Normal  NodeHasNoDiskPressure    2m25s (x8 over 2m27s)  kubelet     Node minikube status is now: NodeHasNoDiskPressure
+  Normal  NodeHasSufficientPID     2m25s (x7 over 2m27s)  kubelet     Node minikube status is now: NodeHasSufficientPID
+Name:                   sba-k8s
+Namespace:              default
+CreationTimestamp:      Tue, 11 Jan 2022 18:10:27 -0500
+Labels:                 app.kubernetes.io/name=load-balancer-sba-k8s
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app.kubernetes.io/name=load-balancer-sba-k8s
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app.kubernetes.io/name=load-balancer-sba-k8s
+  Containers:
+   sba-k8s:
+    Image:      sba-k8s:latest
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Environment:
+      KLAUS_PORT:  8080
+    Mounts:        <none>
+  Volumes:         <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   sba-k8s-97d847d68 (3/3 replicas created)
+Events:          <none>
