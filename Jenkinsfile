@@ -1,20 +1,22 @@
-#!groovy
-
 pipeline {
-  agent any
-  stages {
-    stage('Build Docker Image') {
-      steps {
-         sh 'docker build -t buildapp/k8s-webapplication:latest .'
-      }
+   agent any
+
+   environment {
+        REGISTRY_CREDENTIALS = "dockerhubcred"
+}	
+
+   stages{
+      stage("Build docker image and push to docker hub"){
+         steps{
+	    // Building new image
+            sh 'docker build -t buildapp/k8s-webapplication .'
+	    
+	    // pusing to hub
+	    docker.withRegistry('', REGISTRY_CREDENTIAL ){
+		sh 'docker push buildapp/k8s-webapplication'
+            }			
+				
+          }
+        }
     }
-    stage('Deploy to Docker Hub') {
-      steps {
-        withCredentials([usernamePassword(credentialsId: 'dockerhubcred', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-          sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-          sh 'docker push buildapp/k8s-webapplication:latest'
-         }
-      }
-    }
-  }
 }
