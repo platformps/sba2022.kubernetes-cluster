@@ -1,0 +1,70 @@
+====================NAME: JOHN E NOEL ==================================================
+==================== Cloud DevOps Program =============================================
+========================================================================================
+==================== Getting: kubectl cluster-info =====================================
+Kubernetes control plane is running at https://127.0.0.1:62168
+CoreDNS is running at https://127.0.0.1:62168/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+========================================================================================
+========================================================================================
+==================== Getting: kubectl get services =====================================
+NAME             TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+balanced         LoadBalancer   10.104.184.132   <pending>     8080:31814/TCP   6d12h
+hello-minikube   NodePort       10.98.116.34     <none>        8080:32224/TCP   6d12h
+kubernetes       ClusterIP      10.96.0.1        <none>        443/TCP          6d13h
+mysql            ClusterIP      None             <none>        3306/TCP         34h
+========================================================================================
+========================================================================================
+===================== Getting: kubectl get services -o wide ============================
+NAME             TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE     SELECTOR
+balanced         LoadBalancer   10.104.184.132   <pending>     8080:31814/TCP   6d12h   app=balanced
+hello-minikube   NodePort       10.98.116.34     <none>        8080:32224/TCP   6d12h   app=hello-minikube
+kubernetes       ClusterIP      10.96.0.1        <none>        443/TCP          6d13h   <none>
+mysql            ClusterIP      None             <none>        3306/TCP         34h     app=mysql
+========================================================================================
+========================================================================================
+==================== Getting: minikube IP Address =====================================
+192.168.49.2
+========================================================================================
+========================================================================================
+==================== Getting: kubectl get deployments info =============================
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+myk8sapp-deployment   3/3     3            3           20m
+mysql                 1/1     1            1           34h
+========================================================================================
+========================================================================================
+==================== Getting: kubectl get pods info ====================================
+NAME                                   READY   STATUS    RESTARTS   AGE
+myk8sapp-deployment-7cc57899dd-5vqxc   1/1     Running   0          20m
+myk8sapp-deployment-7cc57899dd-jdnkq   1/1     Running   0          20m
+myk8sapp-deployment-7cc57899dd-vvs9r   1/1     Running   0          20m
+mysql-68579b78bb-6n5lc                 1/1     Running   0          34h
+========================================================================================
+========================================================================================
+==================== Getting: kubectl get pod -o wide info =============================
+NAME                                   READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+myk8sapp-deployment-7cc57899dd-5vqxc   1/1     Running   0          20m   172.17.0.14   minikube   <none>           <none>
+myk8sapp-deployment-7cc57899dd-jdnkq   1/1     Running   0          20m   172.17.0.15   minikube   <none>           <none>
+myk8sapp-deployment-7cc57899dd-vvs9r   1/1     Running   0          20m   172.17.0.8    minikube   <none>           <none>
+mysql-68579b78bb-6n5lc                 1/1     Running   0          34h   172.17.0.5    minikube   <none>           <none>
+========================================================================================
+========================================================================================
+==================== Getting kubectl get pods -l app=myk8sapp =============================
+NAME                                   READY   STATUS    RESTARTS   AGE
+myk8sapp-deployment-7cc57899dd-5vqxc   1/1     Running   0          20m
+myk8sapp-deployment-7cc57899dd-jdnkq   1/1     Running   0          20m
+myk8sapp-deployment-7cc57899dd-vvs9r   1/1     Running   0          20m
+========================================================================================
+========================================================================================
+==================== Getting: kubectl get nodes info ===================================
+NAME       STATUS   ROLES                  AGE     VERSION
+minikube   Ready    control-plane,master   6d13h   v1.22.3
+========================================================================================
+========================================================================================
+==================== Getting: kubectl get replicaset info ==============================
+NAME                             DESIRED   CURRENT   READY   AGE
+myk8sapp-deployment-7cc57899dd   3         3         3       20m
+mysql-68579b78bb                 1         1         1       34h
+========================================================================================
+========================================================================================

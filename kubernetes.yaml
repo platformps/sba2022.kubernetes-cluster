@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myk8sapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: myk8sapp
+  replicas: 3 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: myk8sapp
+    spec:
+      containers:
+      - name: myk8sapp
+        image: johnenoel/k8s-sba-image
+        resources: {}
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+
