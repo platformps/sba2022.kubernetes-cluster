@@ -1,0 +1,34 @@
+==================== Getting the state of the cluster ==================================
+Kubernetes control plane is running at https://127.0.0.1:59940
+CoreDNS is running at https://127.0.0.1:59940/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+========================================================================================
+==================== Getting the list of created services ==============================
+NAME             TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)          AGE
+hello-minikube   NodePort    10.99.32.76   <none>        8080:32131/TCP   6d4h
+kubernetes       ClusterIP   10.96.0.1     <none>        443/TCP          6d4h
+========================================================================================
+==================== Getting the list of deployment ====================================
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+hello-minikube     1/1     1            1           6d4h
+myapp-deployment   3/3     3            3           36m
+========================================================================================
+==================== Getting the list of the pods ======================================
+NAME                                READY   STATUS    RESTARTS      AGE
+hello-minikube-6ddfcc9757-n6c6w     1/1     Running   1 (41m ago)   6d4h
+myapp-deployment-65f74b7895-5hkq6   1/1     Running   0             14m
+myapp-deployment-65f74b7895-vvphb   1/1     Running   0             13m
+myapp-deployment-65f74b7895-xvvbn   1/1     Running   0             13m
+========================================================================================
+NAME                                READY   STATUS    RESTARTS      AGE    IP            NODE       NOMINATED NODE   READINESS GATES
+hello-minikube-6ddfcc9757-n6c6w     1/1     Running   1 (41m ago)   6d4h   172.17.0.2    minikube   <none>           <none>
+myapp-deployment-65f74b7895-5hkq6   1/1     Running   0             14m    172.17.0.9    minikube   <none>           <none>
+myapp-deployment-65f74b7895-vvphb   1/1     Running   0             13m    172.17.0.6    minikube   <none>           <none>
+myapp-deployment-65f74b7895-xvvbn   1/1     Running   0             13m    172.17.0.10   minikube   <none>           <none>
+========================================================================================
+NAME                                READY   STATUS    RESTARTS   AGE
+myapp-deployment-65f74b7895-5hkq6   1/1     Running   0          14m
+myapp-deployment-65f74b7895-vvphb   1/1     Running   0          13m
+myapp-deployment-65f74b7895-xvvbn   1/1     Running   0          13m
+======================
