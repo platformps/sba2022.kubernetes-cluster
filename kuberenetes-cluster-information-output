@@ -1,0 +1,25 @@
+Kubernetes control plane is running at https://127.0.0.1:56529
+CoreDNS is running at https://127.0.0.1:56529/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   18h
+NAME                                READY   STATUS    RESTARTS         AGE
+myapp-deployment-788df4f5cb-6bdsz   1/1     Running   0                4m58s
+myapp-deployment-788df4f5cb-ns2hc   1/1     Running   19 (6h44m ago)   7h54m
+myapp-deployment-788df4f5cb-w6fg2   1/1     Running   0                5m4s
+NAME                                READY   STATUS    RESTARTS         AGE     IP           NODE       NOMINATED NODE   READINESS GATES
+myapp-deployment-788df4f5cb-6bdsz   1/1     Running   0                4m59s   172.17.0.7   minikube   <none>           <none>
+myapp-deployment-788df4f5cb-ns2hc   1/1     Running   19 (6h44m ago)   7h54m   172.17.0.5   minikube   <none>           <none>
+myapp-deployment-788df4f5cb-w6fg2   1/1     Running   0                5m5s    172.17.0.4   minikube   <none>           <none>
+NAME                                READY   STATUS    RESTARTS         AGE
+myapp-deployment-788df4f5cb-6bdsz   1/1     Running   0                4m59s
+myapp-deployment-788df4f5cb-ns2hc   1/1     Running   19 (6h44m ago)   7h54m
+myapp-deployment-788df4f5cb-w6fg2   1/1     Running   0                5m5s
+NAME       STATUS   ROLES                  AGE   VERSION
+minikube   Ready    control-plane,master   18h   v1.22.3
+NAME                          DESIRED   CURRENT   READY   AGE
+myapp-deployment-648556c797   0         0         0       8h
+myapp-deployment-6cff96fc46   0         0         0       7h37m
+myapp-deployment-788df4f5cb   3         3         3       7h54m
+192.168.49.2
