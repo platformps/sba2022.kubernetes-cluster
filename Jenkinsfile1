@@ -1,0 +1,20 @@
+#!groovy
+
+pipeline {
+  agent any
+  stages {
+    stage('Build Docker Image') {
+      steps {
+         bat 'docker build -t buildapp/k8s-webapplication:latest .'
+      }
+    }
+    stage('Deploy to Docker Hub') {
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'dockerhubcred', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
+          bat "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+          bat 'docker push buildapp/k8s-webapplication:latest'
+         }
+      }
+    }
+  }
+}
