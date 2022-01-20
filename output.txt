@@ -1,0 +1,8 @@
+NAME                            READY   STATUS    RESTARTS   AGE
+sba2022deploy-7dc8764d9-5xqtt   1/1     Running   0          22m
+sba2022deploy-7dc8764d9-vg6tl   1/1     Running   0          17m
+sba2022deploy-7dc8764d9-zx5dc   1/1     Running   0          17m
+NAME       STATUS   ROLES                  AGE   VERSION
+minikube   Ready    control-plane,master   33m   v1.22.3
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+sba2022deploy   3/3     3            3           26m
