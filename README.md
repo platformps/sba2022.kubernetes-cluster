@@ -1,10 +1,10 @@
 # Components
 *  Git CLI
-** Used to commit and push code to remote code repository 
+  * Used to commit and push code to remote code repository 
 *  Docker
-** Used to create image of the code build
+  * Used to create image of the code build
 * DockerHub 
-** Used to store docker image that is built   
+  * Used to store docker image that is built   
 *  minikube
 ** Used to spawn kubernetes nodes 
 *  Python - Flask
